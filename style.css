@@ -8,3 +8,13 @@ img {
     width: 20vw;
     height: auto;
 }
+
+ul {
+    list-style: disc;
+    padding-left: 1.25rem;
+}
+
+li {
+    display: list-item;
+    margin-bottom: 0.75rem;
+}
