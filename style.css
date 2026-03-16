@@ -10,11 +10,17 @@ img {
 }
 
 ul {
-    list-style: disc;
+    list-style: none;
     padding-left: 1.25rem;
 }
 
 li {
     display: list-item;
     margin-bottom: 0.75rem;
+}
+
+li::before {
+    content: "☆";
+    font-family: 'Coral Pixels',sans-serif;
+    margin-right: 0.35em;
 }
