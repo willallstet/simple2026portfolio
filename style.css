@@ -2,10 +2,39 @@ body {
     font-family: "Times New Roman", Times, serif;
     font-size: 16px;
     line-height: 1.5;
-    width: 70vw;
+    width: 95vw;
     margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
+}
+
+h1 {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    gap: 0.3em;
+    margin: 0 0 0.5rem;
+    font-size: 2em;
+    font-weight: normal;
+    color: black;
+}
+
+#color-cube {
+    display: block;
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    background: #FF0000;
+}
+
+h1 img {
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    object-fit: cover;
 }
 
 .intro {
@@ -47,13 +76,41 @@ ul {
 li {
     display: list-item;
     margin-bottom: 0.75rem;
-    content-visibility: auto;
-    contain-intrinsic-size: auto 24rem;
+}
+
+ul iframe {
+    display: block;
+    width: 100%;
+    max-width: 560px;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    border: 0;
+}
+
+ul iframe[width="640"][height="480"] {
+    max-width: 640px;
+    aspect-ratio: 4 / 3;
+}
+
+.embed-vimeo {
+    position: relative;
+    width: 100%;
+    max-width: 560px;
+    padding-top: 56.25%;
+}
+
+.embed-vimeo iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: auto;
 }
 
 ul img,
 ul video {
-    width: 20vw;
+    width: 60vw;
     height: auto;
 }
 
@@ -61,4 +118,17 @@ li::before {
     content: "☆";
     font-family: "Times New Roman", Times, serif;
     margin-right: 0.35em;
+}
+
+@media (min-width: 768px) {
+    body {
+        width: 70vw;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    ul img,
+    ul video {
+        width: 20vw;
+    }
 }
