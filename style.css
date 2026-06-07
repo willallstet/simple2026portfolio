@@ -1,28 +1,40 @@
 body {
     font-family: "Times New Roman", Times, serif;
+    font-size: 16px;
     line-height: 1.5;
     width: 70vw;
     margin: 0 auto;
-}
-
-img {
-    width: 20vw;
-    height: auto;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
 }
 
 .intro {
     margin-bottom: 1rem;
+    font-size: 1rem;
 }
 
 .intro-line {
     display: flex;
     align-items: flex-start;
-    gap: 0.5em;
+    gap: 0.5rem;
+    font-size: 1rem;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+.intro-line span {
+    flex: 1 1 auto;
+    min-width: 0;
+    font-size: inherit;
+}
+
+.intro-line a {
+    font-size: inherit;
 }
 
 .intro-line img {
-    width: 1.4em;
-    height: 1.4em;
+    width: 1.4rem;
+    height: 1.4rem;
     object-fit: cover;
     flex-shrink: 0;
     margin-top: 0.15em;
