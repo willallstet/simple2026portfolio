@@ -10,6 +10,24 @@ img {
     height: auto;
 }
 
+.intro {
+    margin-bottom: 1rem;
+}
+
+.intro-line {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5em;
+}
+
+.intro-line img {
+    width: 1.4em;
+    height: 1.4em;
+    object-fit: cover;
+    flex-shrink: 0;
+    margin-top: 0.15em;
+}
+
 ul {
     list-style: none;
     padding-left: 1.25rem;
