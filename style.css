@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Times New Roman", Times, serif;
     line-height: 1.5;
     width: 70vw;
     margin: 0 auto;
@@ -22,6 +22,6 @@ li {
 
 li::before {
     content: "☆";
-    font-family: Arial, sans-serif;
+    font-family: "Times New Roman", Times, serif;
     margin-right: 0.35em;
 }

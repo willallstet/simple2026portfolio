@@ -8,10 +8,43 @@
 </head>
 <body>
 
-<h1>Will Allstetter</h1>
-<p>I am an artist, writer, and engineer between NYC and Boston.<br/>
-    I am a fellow and student at <a href="https://act.mit.edu/about/people/will-allstetter/">MIT's Art, Culture, and Technology department</a>.
-    <br/>This summer, I am working at <a href="https://research.ibm.com/">IBM Research</a> on the incubation team.
+<h1 style="
+  color: black;
+  display: inline;
+  vertical-align: middle;
+">
+  <span id="color-cube" style="
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    margin-right: 0.3em;
+    background: #FF0000;
+  ">&nbsp;&nbsp;&nbsp;</span>
+  Will Allstetter
+  <img src="photos/my classic.jpg" alt="My classic" style="
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    margin-left: 0.3em;
+    object-fit: cover;
+  ">
+</h1>
+<script>
+  (function() {
+    const bgColors = ['#FF0000', '#0000FF', '#00FF00'];
+    let i = 0;
+    setInterval(() => {
+      document.getElementById('color-cube').style.background = bgColors[i % bgColors.length];
+      i++;
+    }, 350);
+  })();
+</script>
+<br/>
+    I am an artist, writer, and engineer between NYC and Boston.<br/>
+    I am a fellow and student at <a href="https://act.mit.edu/about/people/will-allstetter/">MIT's Art, Culture, and Technology department</a>. I did my undergrad at Brown in Computer Science and English Literautre.
+    <br/>This summer, I am working at <a href="https://research.ibm.com/">IBM Research</a> on their incubation team.
     <br/>
     Otherwise, my design and commercial work is done through <a href="https://absentrook.com">Absent Rook Hypermedia</a>.<br/>
     I am accessible on <a href="https://www.are.na/will-allstetter">Are.na</a>, <a href="https://www.instagram.com/willallstetter/">Instagram</a>, and at <a href="mailto:will@willallstetter.com">will@willallstetter.com</a>.</p>
