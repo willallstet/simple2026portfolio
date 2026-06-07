@@ -24,7 +24,6 @@ body {
 
 .intro-line span {
     flex: 1 1 auto;
-    min-width: 0;
     font-size: inherit;
 }
 
