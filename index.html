@@ -138,9 +138,10 @@
     return false;
   }
 
-  function isNearViewport(el) {
+  function shouldLoad(el) {
     var rect = el.getBoundingClientRect();
-    return rect.bottom >= -margin && rect.top <= window.innerHeight + margin;
+    // Load anything at or above the prefetch zone, including items above the scroll position.
+    return rect.top <= window.innerHeight + margin;
   }
 
   function loadVimeoScript() {
@@ -154,7 +155,14 @@
     if (busy || next >= queue.length) return;
 
     var el = queue[next];
-    if (!hasDeferredSources(el) || !isNearViewport(el)) return;
+
+    if (!hasDeferredSources(el)) {
+      next += 1;
+      schedule();
+      return;
+    }
+
+    if (!shouldLoad(el)) return;
 
     busy = true;
     var finished = false;
@@ -219,7 +227,11 @@
 
   window.addEventListener('scroll', schedule, { passive: true });
   window.addEventListener('resize', schedule);
+  window.addEventListener('load', schedule);
+  window.addEventListener('pageshow', schedule);
   schedule();
+  requestAnimationFrame(schedule);
+  setTimeout(schedule, 250);
 })();
 </script>
 
