@@ -36,6 +36,14 @@ ul {
 li {
     display: list-item;
     margin-bottom: 0.75rem;
+    content-visibility: auto;
+    contain-intrinsic-size: auto 24rem;
+}
+
+ul img,
+ul video {
+    width: 20vw;
+    height: auto;
 }
 
 li::before {
