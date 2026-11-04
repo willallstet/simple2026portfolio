@@ -114,6 +114,20 @@ ul video {
     height: auto;
 }
 
+.image-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 0.4rem;
+    margin-top: 0.35rem;
+}
+
+.image-row img {
+    width: calc(50% - 0.2rem);
+    flex: 0 1 calc(50% - 0.2rem);
+    height: auto;
+}
+
 li::before {
     content: "☆";
     font-family: "Times New Roman", Times, serif;
@@ -130,5 +144,10 @@ li::before {
     ul img,
     ul video {
         width: 20vw;
+    }
+
+    .image-row img {
+        width: calc((100% - 0.8rem) / 3);
+        flex-basis: calc((100% - 0.8rem) / 3);
     }
 }
