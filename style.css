@@ -122,10 +122,17 @@ ul video {
     margin-top: 0.35rem;
 }
 
-.image-row img {
+.image-row img,
+.image-row iframe {
     width: calc(50% - 0.2rem);
     flex: 0 1 calc(50% - 0.2rem);
     height: auto;
+    max-width: none;
+}
+
+.image-row iframe {
+    aspect-ratio: 9 / 16;
+    border: 0;
 }
 
 li::before {
@@ -146,7 +153,8 @@ li::before {
         width: 20vw;
     }
 
-    .image-row img {
+    .image-row img,
+    .image-row iframe {
         width: calc((100% - 0.8rem) / 3);
         flex-basis: calc((100% - 0.8rem) / 3);
     }
